@@ -1,6 +1,7 @@
 from utils import *
 import multiprocessing
 if __name__ == '__main__':
+    #path  = "/home/yassine/Downloads/facebook"
     G = load_graph()
     p = multiprocessing.Process(target = visualize_graph , args=(G,))
     p.start()
@@ -20,6 +21,8 @@ if __name__ == '__main__':
 
     X_train_scaled , X_test_scaled = scaler(X_train, X_test)
     best_clf_name , best_score  = classifier_models(classifiers, X_train_scaled , X_test_scaled ,y_train ,  y_test)
+    
+
     
     
 
